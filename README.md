@@ -179,16 +179,25 @@ Système d'information bancaire pour une institution financière gérant des com
 
 ## Étape 3 : Modèle Logique de Données (MLD)
 
-COMPTE = (id_compte INT, libelle_compte VARCHAR(50), type_compte VARCHAR(50), solde_compte DOUBLE, date_ouverture DATE, date_cloture DATE, statut_compte VARCHAR(50));
-AGENCE = (id_agence INT, nom_agence VARCHAR(50), numero_rue_agence INT, nom_rue_agence VARCHAR(50), code_postal_agence INT, ville_agence VARCHAR(50), telephone_agence BIGINT);
-GARANTIE = (id_garantie INT, valeur_garantie DOUBLE, type_garantie VARCHAR(50), description_garantie VARCHAR(50));
-ECHEANCE = (id_echeance INT, date_echeance_prevue DATE, montant_echeance DOUBLE, montant_capital DOUBLE, montant_interets DOUBLE, date_paiement_effectif DATE, statut_echeance VARCHAR(50));
-CONSEILLER = (id_conseiller INT, nom_conseiller VARCHAR(50), prenom_conseiller VARCHAR(50), email_conseiller VARCHAR(50), specialite_conseiller VARCHAR(50), #id_conseiller_manager, #id_agence);
-ECHEANCIER = (id_echeancier INT, #id_echeance);
-CLIENT = (id_client INT, nom_client VARCHAR(50), prenom_client VARCHAR(50), date_naissance DATE, numero_rue_client INT, nom_rue_client VARCHAR(50), code_postal_client INT, ville_client VARCHAR(50), telephone_client BIGINT, email_client VARCHAR(50), type_client VARCHAR(50), #id_conseiller);
-DEMANDE_CREDIT = (id_demande INT, duree_souhaitee INT, type_credit VARCHAR(50), date_depot_demande DATE, statut_demande VARCHAR(50), motif_refus VARCHAR(50), taux_interet DOUBLE, montant_demande DOUBLE, #id_echeancier, #id_client);
-POSSEDE = (#id_client, #id_compte);
-NECESSITE = (#id_demande, #id_garantie);
+- COMPTE = (id_compte INT, libelle_compte VARCHAR(50), type_compte VARCHAR(50), solde_compte DOUBLE, date_ouverture DATE, date_cloture DATE, statut_compte VARCHAR(50));
+
+- AGENCE = (id_agence INT, nom_agence VARCHAR(50), numero_rue_agence INT, nom_rue_agence VARCHAR(50), code_postal_agence INT, ville_agence VARCHAR(50), telephone_agence BIGINT);
+
+- GARANTIE = (id_garantie INT, valeur_garantie DOUBLE, type_garantie VARCHAR(50), description_garantie VARCHAR(50));
+
+- ECHEANCE = (id_echeance INT, date_echeance_prevue DATE, montant_echeance DOUBLE, montant_capital DOUBLE, montant_interets DOUBLE, date_paiement_effectif DATE, statut_echeance VARCHAR(50));
+
+- CONSEILLER = (id_conseiller INT, nom_conseiller VARCHAR(50), prenom_conseiller VARCHAR(50), email_conseiller VARCHAR(50), specialite_conseiller VARCHAR(50), #id_conseiller_manager, #id_agence);
+
+- ECHEANCIER = (id_echeancier INT, #id_echeance);
+
+- CLIENT = (id_client INT, nom_client VARCHAR(50), prenom_client VARCHAR(50), date_naissance DATE, numero_rue_client INT, nom_rue_client VARCHAR(50), code_postal_client INT, ville_client VARCHAR(50), telephone_client BIGINT, email_client VARCHAR(50), type_client VARCHAR(50), #id_conseiller);
+
+- DEMANDE_CREDIT = (id_demande INT, duree_souhaitee INT, type_credit VARCHAR(50), date_depot_demande DATE, statut_demande VARCHAR(50), motif_refus VARCHAR(50), taux_interet DOUBLE, montant_demande DOUBLE, #id_echeancier, #id_client);
+
+- POSSEDE = (#id_client, #id_compte);
+
+- NECESSITE = (#id_demande, #id_garantie);
 
 
 
