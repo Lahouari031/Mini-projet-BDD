@@ -182,9 +182,9 @@ Système d'information bancaire pour une institution financière gérant des com
 | Association | Entités liées | Cardinalités | Signification |
 |-------------|---------------|--------------|---------------|
 | TRAVAILLE_DANS | CONSEILLER - AGENCE | 1,n - 1,1 | Un conseiller travaille dans une seule agence. Une agence emploie plusieurs conseillers. |
-| SUPERVISE | CONSEILLER - CONSEILLER | 0,1 - 0,n | Un conseiller peut superviser plusieurs conseillers (hiérarchie). |
+| SUPERVISE | CONSEILLER - CONSEILLER | 0,1 - 0,n | Un conseiller peut superviser plusieurs conseillers (hiérarchie interne). |
 | EST_SUIVI_PAR | CLIENT - CONSEILLER | 0,n - 1,1 | Un client est suivi par un seul conseiller. Un conseiller peut suivre plusieurs clients. |
-| POSSEDE | CLIENT - COMPTE | 1,n - 1,1 | Un client possède un ou plusieurs comptes. Un compte appartient à un seul client. |
+| POSSEDE | CLIENT - COMPTE | 1,n - 1,n | Un client possède un ou plusieurs comptes. Un compte appartient à au moins un client. Cela permet les comptes joints. |
 | EFFECTUE | CLIENT - DEMANDE_CREDIT | 1,1 - 0,n | Un client peut effectuer plusieurs demandes. Une demande est faite par un seul client. |
 | NECESSITE | DEMANDE_CREDIT - GARANTIE | 1,1 - 0,n | Une demande peut nécessiter plusieurs garanties. Une garantie concerne une seule demande. |
 | GENERE | DEMANDE_CREDIT - ECHEANCIER | 1,1 - 0,1 | Une demande acceptée génère un échéancier. Un échéancier concerne une seule demande. |
