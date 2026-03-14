@@ -38,7 +38,7 @@ Système d'information bancaire pour une institution financière gérant des com
 
 - Chaque compte bancaire est identifié par un numéro de compte unique
 - Un compte possède un libellé (ex : compte courant, compte épargne, compte professionnel)
-- Un compte est obligatoirement rattaché à un seul client titulaire
+- Un compte est obligatoirement rattaché à au moins un client titulaire
 - Chaque compte possède un solde qui évolue dans le temps
 - Un compte a une date d'ouverture
 - Un compte peut être clôturé, auquel cas une date de clôture est enregistrée
@@ -139,7 +139,7 @@ Système d'information bancaire pour une institution financière gérant des com
 
 #### AGENCE
 - **Identifiant :** id_agence
-- **Attributs :** nom_agence, adresse_agence, telephone_agence
+- **Attributs :** nom_agence,  numero_rue_agence, nom_rue_agence, code_postal_agence, ville_agence, telephone_agence
 - **Description :** Représente les agences bancaires où travaillent les conseillers
 
 #### CONSEILLER
@@ -149,7 +149,7 @@ Système d'information bancaire pour une institution financière gérant des com
 
 #### CLIENT
 - **Identifiant :** id_client
-- **Attributs :** nom_client, prenom_client, date_naissance, adresse_client, telephone_client, email_client, type_client
+- **Attributs :** nom_client, prenom_client, date_naissance, numero_rue_client, nom_rue_client, code_postal_client, ville_client, telephone_client, email_client, type_client
 - **Description :** Représente les clients de la banque (personnes physiques ou morales)
 
 #### COMPTE
