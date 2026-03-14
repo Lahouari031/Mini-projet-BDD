@@ -13,7 +13,7 @@ ORDER BY nom_client ASC;
 SELECT id_compte, libelle_compte, type_compte, solde_compte
 FROM COMPTE
 WHERE statut_compte = 'actif'
-AND solde_compte BETWEEN 1000 AND 50000
+AND (solde_compte BETWEEN 1000 AND 50000)
 ORDER BY solde_compte DESC;
 
 SELECT DISTINCT type_compte
