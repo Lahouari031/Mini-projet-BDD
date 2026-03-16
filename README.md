@@ -356,6 +356,7 @@ Le MCD respecte la 3FN :
 | 4 | Au moins 2 éléments de modélisation avancée | Récursive + Entité faible |
 | 5 | Intégration de toutes les données du dictionnaire | 35 données + ajouts pertinents |
 
+
 ### Scénarios d'utilisation
 
 ## Scénario 1 — Le directeur d'agence
