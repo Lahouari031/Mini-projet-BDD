@@ -356,3 +356,15 @@ Le MCD respecte la 3FN :
 | 4 | Au moins 2 éléments de modélisation avancée | Récursive + Entité faible |
 | 5 | Intégration de toutes les données du dictionnaire | 35 données + ajouts pertinents |
 
+## Scénario 1 — Le directeur d'agence
+
+Il veut surveiller l'activité de son agence : ses conseillers, leurs clients, les demandes de crédit en cours, les impayés.
+
+## Scénario 2 — Le service des risques
+
+Il analyse les crédits accordés, vérifie que les garanties couvrent bien les montants, surveille les échéances impayées ou en retard.
+
+## Scénario 3 — Le conseiller bancaire
+
+Il consulte ses propres clients, leurs comptes, leurs demandes de crédit et leurs échéanciers pour préparer ses rendez-vous.
+
