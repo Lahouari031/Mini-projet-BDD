@@ -338,14 +338,6 @@ Le MCD respecte la 3FN :
 - **IA Générative :** Claude pour la génération des règles métier et du dictionnaire
 
 
-## Références
-
-- Cours TI404 - Bases de données 1 : Concepts de base
-- Documentation MERISE
-- Sites web bancaires : BNP Paribas, Crédit Agricole, HSBC, JP Morgan
-- Framework RICARDO pour le prompt engineering
-
-
 ## Conformité aux exigences
 
 | Critère | Exigence | Statut |
