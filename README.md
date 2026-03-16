@@ -356,15 +356,20 @@ Le MCD respecte la 3FN :
 | 4 | Au moins 2 éléments de modélisation avancée | Récursive + Entité faible |
 | 5 | Intégration de toutes les données du dictionnaire | 35 données + ajouts pertinents |
 
+### Scénarios d'utilisation
+
 ## Scénario 1 — Le directeur d'agence
 
-Il veut surveiller l'activité de son agence : ses conseillers, leurs clients, les demandes de crédit en cours, les impayés.
+Le directeur d'agence est le responsable opérationnel d'une agence bancaire. Il utilise la base de données au quotidien pour surveiller l'activité de son agence : suivre ses conseillers et leur charge de travail, consulter les clients rattachés à son agence, analyser les demandes de crédit en cours, et détecter les éventuels impayés.
+Les requêtes associées à ce scénario couvrent les projections et sélections simples, les tris, les filtres par plage de valeurs avec BETWEEN, les listes de valeurs avec IN, les masques avec LIKE, ainsi que les fonctions d'agrégation avec GROUP BY et HAVING pour calculer des statistiques sur ses équipes et ses portefeuilles.
 
 ## Scénario 2 — Le service des risques
 
-Il analyse les crédits accordés, vérifie que les garanties couvrent bien les montants, surveille les échéances impayées ou en retard.
+L'analyste du service des risques est chargé d'évaluer l'exposition financière de la banque. Il utilise la base de données pour analyser les crédits accordés, vérifier que les garanties associées à chaque demande couvrent bien les montants empruntés, et surveiller les échéances impayées ou en retard afin de déclencher des actions de recouvrement.
+Les requêtes associées à ce scénario couvrent les jointures internes et externes simples et multiples, notamment des jointures récursives sur la table CONSEILLER pour la hiérarchie managériale, ainsi que des requêtes imbriquées avec IN, NOT IN, EXISTS et ALL pour identifier les situations à risque.
 
-## Scénario 3 — Le conseiller bancaire
+## Scénario 3 — Le conseiller bancaire 
 
-Il consulte ses propres clients, leurs comptes, leurs demandes de crédit et leurs échéanciers pour préparer ses rendez-vous.
+Le conseiller bancaire prépare ses rendez-vous clients en consultant la base de données. Il veut voir la liste de ses propres clients, leurs comptes, leurs demandes de crédit en cours d'étude, et vérifier que les garanties de chaque dossier sont suffisantes avant de rencontrer le client.
+Les requêtes associées à ce scénario combinent jointures externes, agrégations et HAVING sur des conditions calculées, illustrant des cas d'usage métier concrets directement issus des règles définies en étape 1.
 
